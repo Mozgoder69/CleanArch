@@ -1,0 +1,6 @@
+psycopg2
+psycopg2-binary
+pyramid
+pyramid_jinja2
+marshmallow
+WTForms

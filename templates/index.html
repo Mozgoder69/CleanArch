@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content%}
+
+  <div class="main-catalog">
+    <h1>Общие характеристики услуг</h1>
+    <p>Здесь будет информация о стандартной и экспресс-чистке.</p>
+    <div class="catalog-cards">
+        <!-- Пример карточки -->
+        <div class="card">
+          <h2>Детали услуг</h2>
+          <p>Информация о сухой чистке, аквачистке, ремонте одежды и т.д.</p>
+        </div>
+        <!-- Добавить больше карточек -->
+    </div>
+    <div class="catalog-buttons">
+        <button>Создание заказа</button>
+        <button>Поиск заказа</button>
+        <!-- Другие кнопки -->
+    </div>
+</div>
+
+{% endblock %}

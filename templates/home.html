@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+
+{% extends "base.html" %}
+
+{% block content%}
+
+    <h1>Tables</h1>
+    <form action="{{ request.route_url('table_view') }}" method="GET">
+        <label for="table_name">Select a table:</label>
+        <select name="table_name" id="table_name">
+            {% for table in tables %}
+                <option value="{{ table }}">{{ table }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Show Table</button>
+    </form>
+
+{% endblock %}

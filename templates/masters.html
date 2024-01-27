@@ -1,0 +1,36 @@
+<!-- templates/masters.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="master-interface">
+    <h2>Панель Мастера</h2>
+
+    <!-- Переключатель разделов -->
+    <div class="section-switcher">
+        <button id="unstarted-orders">Неначатые Заказы</button>
+        <button id="current-tasks">Текущие Задачи</button>
+        <button id="search-inventory">Поиск на Складе</button>
+    </div>
+
+    <!-- Область заказов -->
+    <div class="orders-area">
+        <!-- Здесь будет динамически загружаться информация о заказах -->
+    </div>
+
+    <!-- Форма деталей заказа -->
+    <div class="order-details-form" style="display:none;">
+        <h3>Детали Заказа</h3>
+        <!-- Динамическая форма деталей заказа -->
+    </div>
+
+    <!-- Функции управления заказом -->
+    <div class="order-management">
+        <button id="assign-order">Назначить Заказ</button>
+        <button id="complete-order">Завершить Заказ</button>
+        <!-- Другие функции управления заказом -->
+    </div>
+</div>
+
+{% endblock %}

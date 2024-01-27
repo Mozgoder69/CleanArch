@@ -1,0 +1,55 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+</head>
+<body>
+    <header>
+        <!-- Общая шапка сайта -->
+
+        <!-- Top Toolbar -->
+    <div class="toolbar">
+      <a href="#">Settings</a>
+      <a href="#">Log Emulator</a>
+      <input type="text" placeholder="Search...">
+      <a href="#">Sign In/Out</a>
+      <a href="#">Screen Mode</a>
+      <a href="#">Exit App</a>
+  </div>
+
+  <!-- Sub Toolbar -->
+  <div class="sub-toolbar">
+      <button>Go Back</button>
+      <button>Go Next</button>
+      <select>
+          <option value="table1">Table 1</option>
+          <!-- Add more options here -->
+      </select>
+      <span>TableName</span>
+      <!-- Add more buttons as needed -->
+  </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <!-- Общий подвал сайта -->
+
+          <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="#">Главная</a>
+    <a href="#">Услуги</a>
+    <a href="#">Мои заказы</a>
+    <a href="#">Профиль</a>
+</div>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

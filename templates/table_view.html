@@ -1,0 +1,27 @@
+<!-- templates/table_view.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>{{ request.params.get('table_name', 'Table') }}</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                {% for column in table_data[0].keys() %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table_data %}
+                <tr>
+                    {% for value in row.values() %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

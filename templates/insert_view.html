@@ -1,0 +1,18 @@
+<!-- templates/insert_view.html -->
+
+{% extends "base.html" %}
+
+{% block content%}
+
+    <h1>Insert Data into {{ table_name }}</h1>
+    <form method="POST" action="{{ request.route_url('insert_view', table_name=table_name) }}">
+        {{ form.csrf_token }}
+        {% for field in form %}
+            <div>
+                {{ field.label }}: {{ field() }}
+            </div>
+        {% endfor %}
+        <button type="submit">Insert Data</button>
+    </form>
+
+{% endblock %}
